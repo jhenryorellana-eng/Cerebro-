@@ -1,0 +1,29 @@
+{
+  "name": "recolector-sijs",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Recolector de conocimiento jurisdiccional SIJS con pruebas (etapa 1 del Cerebro Contygo)",
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "sonda": "tsx src/sonda.ts",
+    "recolector": "tsx src/cli.ts",
+    "piloto": "tsx src/piloto.ts",
+    "navegador": "tsx src/abrirNavegador.ts",
+    "contrato:esquemas": "tsx src/contrato/escribirEsquemas.ts",
+    "examen": "tsx src/examen/cli.ts",
+    "fabrica": "tsx src/v3/cli.ts"
+  },
+  "dependencies": {
+    "pdfjs-dist": "6.3.289",
+    "playwright-core": "^1.63.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.2"
+  }
+}

@@ -1,0 +1,36 @@
+{
+ "estado": "New Jersey",
+ "verificado": "2026-09-30/10-01 (Brave + VPN EE. UU.)",
+ "condados": {
+  "Essex (34013)": {
+   "corte": "Superior Court of New Jersey, Chancery Division – Family Part, Essex County (expediente FD, non-dissolution)",
+   "sede": "Essex County Wynona Lipman Family Courthouse, 350 University Avenue, Room 340 (Non-Dissolution Unit), Newark, NJ 07102",
+   "telefono": "973-776-9300 ext. 57045 (Non-Dissolution); Family Division main ext. 56667"
+  }
+ },
+ "vias": {
+  "todas_hasta_21": "Verified Complaint for SIJS Predicate Order CN 13321 (Directiva #04-25, 13-08-2025): pide custodia y hallazgos a la vez. Pueden presentarla padre/madre/tutor, pariente, amigo, agencia; el propio joven si tiene 18+ o es menor sin padre ni tutor. Una demanda POR CADA HIJO. Expediente FD. Orden con texto de confidencialidad de la directiva."
+ },
+ "formularios": [
+  "CN 13321 demanda SIJS (rellenable)",
+  "CN 10486 hoja confidencial (obligatoria FD)",
+  "CN 11191 no servicio militar (si se pide custodia)",
+  "CN 11490 búsqueda diligente (si no hay dirección del otro padre; incluye cartas)",
+  "CN 11223/10482 solo con pensión/manutención"
+ ],
+ "tasa": "FD sin tasa (CN 11492). Presentación: JEDS, en persona o correo.",
+ "ley": [
+  "N.J.S.A. 9:6-1 abandono",
+  "N.J.S.A. 9:6-8.21(c)(4) abuso/negligencia",
+  "N.J.S.A. 2A:34-65 competencia inicial",
+  "N.J.S.A. 2A:34-73 información bajo juramento",
+  "N.J.S.A. 9:2-4 custodia",
+  "H.S.P. v. J.K., 223 N.J. 196 (2015): se aplica ley de NJ"
+ ],
+ "privacidad": "R. 1:38-7: tachar SSN, licencias, placas, pólizas, cuentas; certificar la tachadura en el primer escrito.",
+ "fuentes": [
+  "https://www.njcourts.gov/notices/directive-04-25-family-special-immigrant-juvenile-status-sijs-filing-requirements",
+  "https://www.njcourts.gov/sites/default/files/forms/13321_cmplnt_special_immigrant_juv_status.pdf",
+  "https://www.njcourts.gov/public/directories/court-services/family-offices-dir"
+ ]
+}

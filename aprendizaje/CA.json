@@ -1,0 +1,50 @@
+{
+ "estado": "California",
+ "verificado": "2026-10-02/03 (Brave + VPN EE. UU.)",
+ "condados": {
+  "Stanislaus (06099)": {
+   "corte": "Superior Court of California, County of Stanislaus (una corte superior por condado; divisiones juvenil, probate y familia)",
+   "sedes": "Main Courthouse, 800 11th Street, Modesto, CA 95354 (Family Court Services y su clerk, sala 221; Self-Help Center, sala 220, L-V 8-12 y 1-4, (209) 548-6237, Self.Help@StanCt.org); City Towers, 801 10th Street, 4.º piso (clerk de probate; Prob. local rule 8.00(E)); postal: P.O. Box 3488, Modesto, CA 95353/95354; Turlock Court 300 Starr Ave (solo small claims y UD). Tel. general (209) 530-3100",
+   "tutelas": "Las calendariza Family Court Services (LR 8.00(B)); audiencias L-J 8:30 en Family Court (LR 7.27(D),(H)); investigador de la corte entrevista y revisa antecedentes; copias selladas al investigador el día de presentar (sala 221 o P.O. Box 3488) + acta de nacimiento + GC-120 + cuestionario GR001 + declaración detallada 'Confidential' en pleading form (LR 7.27(D)(3),(G)); la corte no favorece prescindir de la notificación; exige nominación o consentimiento del menor ≥12",
+   "formularios_locales": "GR001 cuestionario (obligatorio, a mano, sin blancos), GR005 disclosure by proposed guardian (obligatorio), FL009 due diligence, paquete 'guardianship322.pdf' (GC-205, GC-505, GC-210, ICWA-010(A), GC-120, GC-211, GC-212, GC-248, GC-240, GC-250, GC-020...)",
+   "tasas": "Petición tutela de la persona $225 (Gov. 70654); investigación pariente $380 / no pariente $300 (página de tutelas de Stanislaus; la tabla estatal dice $500/$300 'amount set by court'); exención con FW-001/FW-003 y FW-002/FW-004; Medi-Cal califica (Gov. 68632(a)(7))",
+   "interpretes": "Gratis en tutelas; pedir con INT-300 30 días antes",
+   "investigador": "Revisa antecedentes penales y de CPS del tutor y de los adultos del hogar (GC-212 y GR001 preguntan por ellos): averiguarlo con el cliente antes de firmar"
+  }
+ },
+ "vias": {
+  "menor_18": "Custodia (Family Law, FL-356 para SIJ) si hay caso de familia; tutela probate (GC-210/GC-210(P)) para un tercero; un padre NO puede ser tutor de su hijo menor (Prob. 1514(b)(2))",
+  "18_a_20": "Tutela de la persona en probate, Prob. Code 1510.1(a) (AB 2224, vigente 01-01-2025): con consentimiento del joven soltero de 18-20 y junto con petición SIJ; 'The court may appoint a parent as the guardian'; la puede pedir un padre, pariente, otra persona o el propio joven; 1510.1(c) no quita derechos de adulto sin su consentimiento; 1510.1(d) 'child/minor/ward' incluye al joven 18-20 que consiente; extensión de una tutela existente pasado los 18 (1510.1(b)). Formularios: GC-210(P) o GC-210 (el ward ≥18 firma el consentimiento en la última página) + GC-220 separado (rule 7.1020(b)(2)) + orden FL-357/GC-224/JV-357",
+  "edad_limite_sij": "CCP 155(a)(2): hallazgos hasta los 21 en cualquier división y momento; nunc pro tunc permitido"
+ },
+ "formularios_sij": [
+  "GC-220 petición SIJ en probate (verificada; separada)",
+  "FL-357/GC-224/JV-357 orden oficial que YA trae los 3 hallazgos (custodia, reunificación no viable, interés superior): no hace falta orden propia",
+  "FL-356/FL-358 en familia; JV-356 en juvenil"
+ ],
+ "ley": [
+  "CCP 155(b)(1): la corte DEBE dictar los hallazgos si hay prueba, que puede ser solo la declaración del menor; cada hallazgo con referencia a la ley de California, fecha y base fáctica; (b)(2) no admite ni menciona la motivación migratoria; (b)(3) copia certificada en 3 días hábiles si se pide trámite rápido con orden propuesta",
+  "Abandono: Fam. 3402(a) ('left without provision for reasonable and necessary care'); Fam. 7822(a)(3),(b) (un año con el otro padre sin sustento ni comunicación = presunción de intención)",
+  "Negligencia: WIC 300(b)(1)(A),(C),(D); Pen. 11165.2 ('general neglect'); abuso físico WIC 300(a) excluye castigo razonable",
+  "Interés superior: Fam. 3011(a); custodia de menor: Fam. 3020 ss; mayoría de edad Fam. 6500 (18); UCCJEA Fam. 3402(b) child <18",
+  "Notificación tutela: Prob. 1511 (15 días; en persona a padres y al ward ≥12; por correo a parientes; con el folleto de Gov. 68511.1); SIJ: rule 7.1020(c); Prob. 1460",
+  "Investigación: Prob. 1513 (pariente → investigador de la corte)",
+  "Declaraciones sin notario: CCP 2015.5 (fuera de California: 'under the laws of the State of California')",
+  "Formato: rules 2.108 (renglones numerados) y 2.111 (primera página); privacidad rule 1.201(a) (SSN y cuentas: 4 últimos)"
+ ],
+ "privacidad": "Cal. Rules of Court 1.201(a): no incluir o tachar SSN y números de cuenta financiera (solo 4 últimos).",
+ "fuentes": [
+  "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PROB&sectionNum=1510.1",
+  "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CCP&sectionNum=155",
+  "https://courts.ca.gov/cms/rules/index/seven/rule7_1020",
+  "https://selfhelp.courts.ca.gov/special-immigrant-juvenile-status/state-order",
+  "https://www.stanislaus.courts.ca.gov/divisions/probate/guardianship-faqs",
+  "https://www.stanislaus.courts.ca.gov/system/files/local-rules/local-rules_-effective-07012026.pdf",
+  "https://www.stanislaus.courts.ca.gov/forms-filing/common-forms-packets"
+ ],
+ "notas_tecnicas": [
+  "leginfo responde lento por la VPN (~2 min por página) y a veces da 'error': reintentar",
+  "Formularios del Judicial Council son XFA-híbridos: rellenar escribiendo sobre la página por índice de widget (mapa.py dibuja los índices) y aplanar",
+  "GR001 y GR005 de Stanislaus no tienen campos: se rellenan por coordenadas junto a sus etiquetas (_motor-referencia/california-tutela-1510-1/locales_ca.py); el GR001 pide no dejar nada en blanco ('N/A')"
+ ]
+}

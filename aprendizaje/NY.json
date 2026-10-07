@@ -1,0 +1,67 @@
+{
+ "estado": "New York",
+ "verificado": "2026-10-01/02 (Brave + VPN EE. UU.; ocfs.ny.gov no responde por la VPN, ver notas)",
+ "condados": {
+  "Queens (36081)": {
+   "corte": "Family Court of the State of New York, County of Queens (NYC Family Court, 11th Judicial District)",
+   "encabezado": "At a Term of the Family Court of the State of New York, held in and for the County of Queens at Jamaica, New York (GF-42 y 6-5); FAMILY COURT OF THE STATE OF NEW YORK / COUNTY OF QUEENS",
+   "sede": "Queens County Family Court, 151-20 Jamaica Avenue, Jamaica, NY 11432",
+   "telefono": "718-298-0197; fax 212-401-9234; queensfamilycourt@nycourts.gov; 9 a 5, peticiones desde 8:30",
+   "presentacion": "NYSCEF (custodia, visitas, tutela), en persona o por correo; NO por email ni EDDS. Expediente con prefijo G (tutela, 22 NYCRR 205.7(b))",
+   "zip_a_condado": "data.ny.gov dataset juva-r6g2 (NYS ZIP Codes-County FIPS Cross-Reference); consulta /resource/juva-r6g2.json?zip_code=NNNNN"
+  },
+  "NYC (los cinco)": {
+   "sedes": "Bronx 900 Sheridan Ave 10451; Kings 330 Jay St 11201; New York 60 Lafayette St 10013; Queens 151-20 Jamaica Ave 11432; Richmond 100 Richmond Terrace 10301 (página Contact the NYC Family Court, 2026)"
+  }
+ },
+ "vias": {
+  "18_a_20": "Tutela de la persona (FCA 661(a) + SCPA art. 17): 'infant or minor' incluye a quien tiene menos de 21 y consiente la tutela tras los 18. El joven firma el 6-3 (consentimiento, jurado ante secretario o notario; SCPA 1706(1)). Dura hasta los 21 (SCPA 1707(2)). Puede pedirla el padre o la madre como tutor: Matter of Jefferson D.O.M. (Maria T.M.S.), 249 AD3d 880 (2d Dept 13-05-2026), madre nombrada tutora y hallazgos SIJS. UCCJEA no aplica (DRL 75-a(2): child = menor de 18), asi que no se exigen 6 meses de residencia.",
+  "quien_presenta_tutela": "Adulto que pide ser tutor: formulario 6-1. Joven de 14+ que pide su propio tutor: 6-1-a. Persona en nombre de otro menor de 21: 6-1-b. (Instrucciones oficiales 'Filing for Guardianship', NYC Family Court.)",
+  "menor_18_padre_o_madre": "Custodia (FCA art. 6, GF-17) con moción de hallazgos y GF-42 (cerebro: Del Cid Martinez 2016). No verificado en este caso.",
+  "tercero": "Tutela 6-1 (familiar adulto, amigo de la familia o agencia; el menor de 14+ puede pedirla con 6-1-a)."
+ },
+ "formularios_tutela": [
+  "6-1 Petition for Appointment as Guardian of the Person (1/2026) - docx oficial, se rellena con python-docx (tiene un salto de página fijo en el párrafo 51)",
+  "6-2 Affirmation and Designation for Service of Process (4/2025) - OJO: la ficha web enlaza la versión de Nassau ('ncfc', COUNTY OF NASSAU); la estatal está en webfiles.nycourts.gov/public/2025-12/6-2.pdf y .docx",
+  "6-3 Consent of Person Over 18 / Preference of Person Over 14 (4/2011) - jurado ante secretario o notario; el joven declara haber leído la petición y creerla cierta",
+  "6-4 Waiver of Process, Renunciation or Consent (padres) - solo si el padre/madre consiente",
+  "OCFS-3909 Request for Information Guardianship (Rev. 10/2016) - .dotx con campos heredados (FORMTEXT/FORMCHECKBOX): rellenar por COM con FormFields; pide TODAS las direcciones de 28 años con mes/año de cada persona del hogar",
+  "6-5 Order Appointing Guardian of the Person - vigente PDF (1/2026, añade determinación ICWA); el .doc oficial es 8/2010: no usarlo",
+  "GF-42 Order - Special Findings (1/2026) - trae los dos hallazgos USCIS (3: reunificación no viable; 4: interés superior): no hace falta orden propia",
+  "Moción: no hay formulario oficial; Notice of Motion + affirmations propias"
+ ],
+ "tasa": "Ninguna en la Family Court (página oficial de tutela).",
+ "ley": [
+  "FCA 115(c) competencia en tutela de la persona",
+  "FCA 661(a) tutela hasta 21 con consentimiento",
+  "SCPA 1702(1)(a) condado donde reside o 'sojourned'",
+  "SCPA 1704 contenido de la petición; 1705 a quién notificar (padres si están en el estado y se conoce domicilio; al joven de 14+ si pide otro); 1706 consentimiento del mayor de 18 y consulta OCFS; 1707(2) duración",
+  "FCA 1012(e)(i) abused child; 1012(f)(i)(B) neglected child: castigo corporal excesivo, abuso de alcohol",
+  "SSL 384-b(5)(a) abandono: no visitar Y no comunicarse",
+  "FCA 657(c) facultades del tutor",
+  "CPLR 2106 (rev. 2025-11-28): cualquier persona, esté donde esté, puede firmar 'affirmation' bajo pena de perjurio sin notario",
+  "CPLR 2101(b): todo anexo en idioma extranjero con traducción y affidavit/affirmation del traductor (calificaciones y exactitud)",
+  "Matter of Jefferson D.O.M., 249 AD3d 880 (2d Dept 2026); Matter of Ramiro A.L.P., 250 AD3d 834 (2d Dept 2026); Matter of Marisol N.H., 115 AD3d 185 (2d Dept 2014)"
+ ],
+ "privacidad": "La Parte 205 (Family Court) no tiene regla de tachado de datos; sus expedientes son de acceso restringido (205.5). La 202.5(e) (Supreme/County) excluye custodia. Se aplicó como buena práctica (APUESTA) el estándar 202.5(e)(1)(iv): números de cuenta y tarjeta dejando los 4 últimos. Fechas de nacimiento y documentos de identidad no se tachan: los formularios los piden.",
+ "traductor": "El certificado de Andrew no dice 'under penalties of perjury': se añadió una 'Affirmation of Translator (CPLR 2101[b]; 2106)' para que la firme él, sin tocar su certificado. Y una afirmación de intérprete para quien lea en español a los firmantes que no leen inglés (APUESTA: práctica, no se capturó jurisprudencia).",
+ "notas": [
+  "ocfs.ny.gov e its.ny.gov (red del estado, 161.11.x.x) no responden por la VPN (ERR_TIMED_OUT) y cortan conexiones de clientes automáticos: el usuario baja el archivo con su navegador y se registra el sha256.",
+  "webfiles.nycourts.gov tiene reto de Cloudflare: abrir el PDF en la pestaña, esperar a que pase y descargar con fetch desde ese mismo origen. Las fichas /forms/... cargan tarde ('Loading...'): esperar a 'Form Number'.",
+  "nysenate.gov a veces muestra 'Un momento...' (reto): calentar la página antes de capturar."
+ ],
+ "fuentes": [
+  "https://www.nycourts.gov/courts/11th-judicial-district/queens-county-family-court",
+  "https://www.nycourts.gov/new-york-city-family-court/contact-nyc-family-court",
+  "https://www.nycourts.gov/new-york-city-family-court/guardianship",
+  "https://www.nycourts.gov/new-york-city-family-court/filing-guardianship",
+  "https://www.nycourts.gov/forms/special-immigrant-juvenile-status-order",
+  "https://www.nycourts.gov/advisory-groups/advisory-council-immigration-issues-family-court",
+  "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_02983.shtml",
+  "https://www.nysenate.gov/legislation/laws/FCT/661",
+  "https://www.nysenate.gov/legislation/laws/DOM/75-A",
+  "https://www.nycourts.gov/rules/part-205-uniform-rules-family-court",
+  "https://data.ny.gov/Government-Finance/New-York-State-ZIP-Codes-County-FIPS-Cross-Referen/juva-r6g2",
+  "https://ocfs.ny.gov/main/Forms/cps/OCFS-3909_Request-for-Information-Guardianship-Form_For-Court-Use-Only.dotx"
+ ]
+}

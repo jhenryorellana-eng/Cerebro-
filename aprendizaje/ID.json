@@ -1,0 +1,41 @@
+{
+ "estado": "Idaho",
+ "verificado": "2026-09-29/30 (Brave + VPN EE. UU.)",
+ "condados": {
+  "Madison (16065)": {
+   "corte": "District Court of the Seventh Judicial District of the State of Idaho, in and for the County of Madison — Magistrate Division",
+   "sede": "Madison County Courthouse, 159 E Main St., P.O. Box 389, Rexburg, ID 83440",
+   "telefono": "(208) 359-6252",
+   "court_assistance_office": "208-589-9872, d7cao@idcourts.gov"
+  }
+ },
+ "vias": {
+  "padre_o_madre_menor_18": "Custodia (CAO P Instruction 1) en la Magistrate Division, con petición verificada propia y orden propuesta con hallazgos SIJS. CAO P 1-2 NO sirve si los padres estuvieron casados (declara 'not married'); CAO P 8-2 no trae hallazgos SIJS.",
+  "tercero_menor_18": "Tutela de menor (I.C. 15-5-204): exige derechos parentales terminados o hallazgo de abandono/abuso/negligencia o padres sin hogar estable. Formularios CAO GCM; tasa $216 (instrucciones 07/2025).",
+  "18_a_20": "Sin vía verificada todavía (la tutela y la custodia terminan a los 18, I.C. 32-101)."
+ },
+ "formularios_custodia": [
+  "CAO FL 1-1 hoja de datos (confidencial)",
+  "CAO FL 1-3 citación",
+  "CAO FL 3 Parenting Plan (adjunto a petición y decreto)",
+  "CAO FL 2-1 acuse (certifica leer inglés: sustituir por bilingüe)",
+  "CAO FL 2-2 declaración de notificación",
+  "CAO FL 6-1 estipulación",
+  "CAO FL 7-6 y FL 7-4 rebeldía",
+  "CAO FL 1-11/1-12/1-13/5-1 solo si se pide pensión"
+ ],
+ "ley": [
+  "I.C. 32-11-201 (estado de residencia, UCCJEA)",
+  "I.C. 32-11-209 (información bajo juramento)",
+  "I.C. 16-1602(2) abandono, (31)(a) negligencia",
+  "I.C. 32-717 interés superior",
+  "I.R.F.L.P. 101",
+  "I.C. 15-5-204 tutela",
+  "I.C. 32-101 mayoría de edad 18"
+ ],
+ "privacidad": "Tachar números de Seguro Social (rasterizar).",
+ "fuentes": [
+  "https://courtselfhelp.idaho.gov/",
+  "https://legislature.idaho.gov/statutesrules/idstat/ (capturas en capturas/)"
+ ]
+}

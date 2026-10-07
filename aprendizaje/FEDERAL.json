@@ -1,0 +1,11 @@
+{
+ "verificado": "2026-10-02 (Brave + VPN EE. UU.)",
+ "8_CFR_204.11": {
+  "fuente": "govinfo.gov, CFR edición 1-1-2025 (CFR-2025-title8-vol1-sec204-11.pdf). eCFR (ecfr.gov) NO responde por la VPN: usar govinfo.",
+  "a": "Juvenile court = corte de EE. UU. con competencia según la ley estatal para decidir sobre dependencia y/o custodia y cuidado de juveniles",
+  "b": "menor de 21 al PRESENTAR el I-360 (b)(1); soltero al presentar y al resolver (b)(2); consentimiento DHS = solicitud de buena fe: una razón principal de pedir las determinaciones fue obtener protección frente al maltrato/abandono/negligencia (b)(5)",
+  "c": "(c)(1)(i)(A) dependiente de la corte o (B) bajo custodia de una agencia o de una persona nombrada por la corte; (c)(1)(ii) reunificación con uno o ambos padres no viable por abuso, abandono, negligencia o base similar según la ley estatal (no hace falta terminar la patria potestad); (c)(2) no conviene volver al país de nacionalidad o última residencia habitual; (c)(3)(ii)(B) si la orden termina por edad, vale si el I-360 se presentó antes de los 21",
+  "d5": "la orden debe incluir (i) la base fáctica de cada determinación y (ii) la protección otorgada, p. ej. (A) la custodia ordenada por la corte"
+ },
+ "uscis_policy_manual": "https://www.uscis.gov/policy-manual/volume-6-part-j-chapter-3 (Documentation and Evidence)"
+}

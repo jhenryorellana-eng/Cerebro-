@@ -1,0 +1,21 @@
+# Datos de clientes y listas locales: nunca se suben
+pii_terms.local.txt
+*.local.*
+casos/
+clientes/
+expediente-*/
+certificado*.png
+
+# Recolector: estado, salidas y perfil del navegador (cookies)
+busqueda/node_modules/
+busqueda/perfil-brave/
+busqueda/estado*/
+busqueda/salida*/
+busqueda/data/
+.env
+.env.*
+
+__pycache__/
+*.pyc
+tmp/
+prueba*/

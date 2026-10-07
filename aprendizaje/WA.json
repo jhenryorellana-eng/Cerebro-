@@ -1,0 +1,42 @@
+{
+ "estado": "Washington",
+ "verificado": "2026-10-01 y 2026-10-02 (Brave + VPN EE. UU.)",
+ "condados": {
+  "Clark (53011)": {
+   "corte": "Superior Court of Washington, County of Clark, Juvenile Court (RCW 13.90.010(3))",
+   "sede": "Clark County Juvenile Justice Center, 500 West 11th Street, Vancouver, WA 98666 (entrada por W 11th y Franklin)",
+   "telefono": "Recepción (564) 397-2201; Juvenile Clerk (564) 397-2073 (oficina del Clerk en 2.º piso del Juvenile Justice Center)",
+   "presentacion": "Los escritos que abren un caso se presentan en el Clerk's Office; el Clerk tiene una oficina extensión en el 2.º piso del Juvenile Justice Center; Juvenile Clerk (564) 397-2073 (clark.wa.gov/clerk/juvenile-records). El Clerk tiene e-file (clark.wa.gov/clerk). Llamar antes para confirmar dónde reciben la petición inicial."
+  }
+ },
+ "vias": {
+  "18_a_20": "Vulnerable Youth Guardianship (RCW 13.90): peticiona el propio joven (13.90.020(1)); el tutor propuesto (≥21, adecuado; puede ser uno de los padres, 13.90.020(2)) se une y firma la parte IV del JU 15.0100; sin tasa (13.90.020(4)); solo exige aviso al tutor propuesto, no a los padres; la corte la concede si las alegaciones son ciertas, conviene y el joven consiente POR ESCRITO (13.90.030(2)(c): añadir un consentimiento escrito propio); termina sola a los 21 (13.90.060(1)). Si el tutor no es pariente: antecedentes penales (JU 15.0260); un padre o una madre es pariente (13.90.010(4)(a)).",
+  "menor_18": "Pendiente de verificar (dependencia RCW 13.34, tutela de menor RCW 11.130, custodia RCW 26.09/26.26)."
+ },
+ "formularios_vyg": [
+  "JU 15.0100 petición (07/2018): casilla de línea + abuse/abandonment/neglect; «another basis RCW ___» solo si hay de verdad otra base",
+  "JU 15.0250 declaración del tutor propuesto (pariente: escribir el parentesco)",
+  "JU 15.0260 antecedentes (solo tutor no pariente)",
+  "JU 15.0300 conclusiones: NO trae los hallazgos SIJS de USCIS ni la custodia en términos de 8 CFR 204.11(c) → orden propia",
+  "JU 15.0400 orden: fecha de los 21 años según el acta",
+  "Los .docx/.doc se bajan desde dentro de la pestaña de Brave (fetch); los .doc se pasan a .docx con Word por COM en solo lectura",
+  "Al rellenarlos con python-docx: quitar los párrafos vacíos del final (si no, sale una última página en blanco y el pie dice «of 4» en vez de «of 3»)"
+ ],
+ "ley": [
+  "RCW 13.90.010-.070",
+  "RCW 13.34.030(1) abandoned (intención de renunciar, por palabras o conducta, pudiendo ejercer)",
+  "RCW 26.44.020 abuse or neglect / negligent treatment (la violencia doméstica contra otra persona no es negligencia por sí sola: no marcar «abuse» si la violencia fue contra la madre)"
+ ],
+ "privacidad": "GR 31(e)(1): no incluir y tachar (A) números de Seguro Social (si hace falta, solo los 4 últimos), (B) números de cuenta financiera (si son relevantes, 4 últimos) y (C) números de licencia de conducir. Aplicado también a: número de la tarjeta de identidad de WA (WDL…), línea DD, número vertical y códigos de barras del reverso; número de cuenta de la factura de luz y sus códigos QR. Rasterizar la página para que no quede texto debajo.",
+ "reglas_locales": "Clark LCR (01-09-2026): nada específico de VYG.",
+ "fuentes": [
+  "https://app.leg.wa.gov/RCW/default.aspx?cite=13.90&full=true",
+  "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=111",
+  "https://clark.wa.gov/juvenile-court/location",
+  "https://www.courts.wa.gov/court_rules/pdf/GR/GA_GR_14_00_00.pdf",
+  "https://clark.wa.gov/clerk/juvenile-records",
+  "https://clark.wa.gov/clerk"
+ ],
+ "formato": "GR 14(a): hoja carta; 3 pulgadas libres arriba en la primera página de cada escrito; márgenes de 1 pulgada; una sola cara; SIN páginas ni marcas de color, también en los anexos salvo que no sea práctico → copias de los documentos del cliente y el certificado del traductor en escala de grises; los originales a color se llevan a la audiencia.",
+ "declaraciones": "Fórmula sin notario de los propios formularios: «I declare under penalty of perjury under the laws of the state of Washington that the foregoing is true and correct. Signed at ___ (city), Washington on ___ (date).»"
+}

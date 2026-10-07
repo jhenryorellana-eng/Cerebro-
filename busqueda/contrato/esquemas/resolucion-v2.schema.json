@@ -1,0 +1,813 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:contygo:cerebro:contrato:2.1.0:resolucion",
+  "title": "Respuesta del resolvedor jurisdiccional (contrato 2.1.0)",
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "const": "confirmado"
+        },
+        "motivos": {
+          "maxItems": 0,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "codigo": {
+                "type": "string",
+                "enum": [
+                  "estado_no_publicado",
+                  "direccion_no_geocodificable",
+                  "condado_sin_asignacion",
+                  "requiere_nivel_pueblo",
+                  "falta_dato_caso",
+                  "ninguna_via_aplica",
+                  "varias_vias_sin_preferencia",
+                  "plazo_vencido",
+                  "sede_sin_regla",
+                  "caso_familiar_abierto"
+                ]
+              },
+              "detalle": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "codigo"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "via": {
+          "type": "object",
+          "properties": {
+            "key": {
+              "type": "string",
+              "pattern": "^[a-z0-9][a-z0-9_.:-]*$"
+            },
+            "categoria": {
+              "type": "string",
+              "enum": [
+                "custodia",
+                "tutela",
+                "dependencia",
+                "hallazgos_independientes",
+                "adopcion",
+                "delincuencia",
+                "otra"
+              ]
+            },
+            "nombre": {
+              "type": "string",
+              "minLength": 1
+            },
+            "fechaLimiteOrden": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date",
+                  "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "diasRestantes": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": -9007199254740991,
+                  "maximum": 9007199254740991
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "urgencia": {
+              "type": "string",
+              "enum": [
+                "normal",
+                "proxima",
+                "urgente"
+              ]
+            }
+          },
+          "required": [
+            "key",
+            "categoria",
+            "nombre",
+            "fechaLimiteOrden",
+            "diasRestantes",
+            "urgencia"
+          ],
+          "additionalProperties": false
+        },
+        "corte": {
+          "type": "object",
+          "properties": {
+            "key": {
+              "type": "string",
+              "pattern": "^[a-z0-9][a-z0-9_.:-]*$"
+            },
+            "nombreCanonico": {
+              "type": "string",
+              "minLength": 1
+            },
+            "encabezado": {
+              "minItems": 1,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "required": [
+            "key",
+            "nombreCanonico",
+            "encabezado"
+          ],
+          "additionalProperties": false
+        },
+        "sede": {
+          "type": "object",
+          "properties": {
+            "key": {
+              "type": "string",
+              "pattern": "^[a-z0-9][a-z0-9_.:-]*$"
+            },
+            "nombre": {
+              "type": "string",
+              "minLength": 1
+            },
+            "calle": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "ciudadEstadoZip": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "key",
+            "nombre",
+            "calle",
+            "ciudadEstadoZip"
+          ],
+          "additionalProperties": false
+        },
+        "versionDatos": {
+          "type": "object",
+          "properties": {
+            "estado": {
+              "type": "string",
+              "pattern": "^[A-Z]{2}$"
+            },
+            "version": {
+              "type": "integer",
+              "exclusiveMinimum": 0,
+              "maximum": 9007199254740991
+            }
+          },
+          "required": [
+            "estado",
+            "version"
+          ],
+          "additionalProperties": false
+        },
+        "territorio": {
+          "type": "object",
+          "properties": {
+            "estado": {
+              "type": "string",
+              "pattern": "^[A-Z]{2}$"
+            },
+            "condado": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "fips": {
+                      "type": "string",
+                      "pattern": "^\\d{5}$"
+                    },
+                    "nombre": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "fips",
+                    "nombre"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "pueblo": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "estado",
+            "condado",
+            "pueblo"
+          ],
+          "additionalProperties": false
+        },
+        "viasEvaluadas": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "key": {
+                "type": "string",
+                "pattern": "^[a-z0-9][a-z0-9_.:-]*$"
+              },
+              "aplica": {
+                "type": "string",
+                "enum": [
+                  "si",
+                  "no",
+                  "falta_dato"
+                ]
+              },
+              "razones": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "key",
+              "aplica",
+              "razones"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "formularios": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "key": {
+                "type": "string",
+                "pattern": "^[a-z0-9][a-z0-9_.:-]*$"
+              },
+              "proposito": {
+                "type": "string",
+                "enum": [
+                  "peticion",
+                  "mocion_hallazgos_sijs",
+                  "orden_propuesta",
+                  "portada",
+                  "exencion_tasas",
+                  "notificacion",
+                  "declaracion",
+                  "otro"
+                ]
+              },
+              "numero": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "titulo": {
+                "type": "string",
+                "minLength": 1
+              },
+              "formDefinitionId": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "formato": {
+                "type": "string",
+                "enum": [
+                  "acroform",
+                  "xfa",
+                  "plano",
+                  "escaneado",
+                  "sin_formulario_oficial"
+                ]
+              }
+            },
+            "required": [
+              "key",
+              "proposito",
+              "numero",
+              "titulo",
+              "formDefinitionId",
+              "formato"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "requisitos": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "key": {
+                "type": "string",
+                "pattern": "^[a-z0-9][a-z0-9_.:-]*$"
+              },
+              "tipo": {
+                "type": "string",
+                "enum": [
+                  "tasa",
+                  "exencion_tasa",
+                  "notificacion_padres",
+                  "residencia_minima",
+                  "interprete",
+                  "copias",
+                  "presentacion_electronica"
+                ]
+              },
+              "texto": {
+                "type": "string",
+                "minLength": 1
+              },
+              "montoUsd": {
+                "anyOf": [
+                  {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "key",
+              "tipo",
+              "texto",
+              "montoUsd"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "evidenciaKeys": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9_.:-]*$"
+          }
+        }
+      },
+      "required": [
+        "status",
+        "motivos",
+        "via",
+        "corte",
+        "sede",
+        "versionDatos",
+        "territorio",
+        "viasEvaluadas",
+        "formularios",
+        "requisitos",
+        "evidenciaKeys"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "const": "excepcion"
+        },
+        "motivos": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "codigo": {
+                "type": "string",
+                "enum": [
+                  "estado_no_publicado",
+                  "direccion_no_geocodificable",
+                  "condado_sin_asignacion",
+                  "requiere_nivel_pueblo",
+                  "falta_dato_caso",
+                  "ninguna_via_aplica",
+                  "varias_vias_sin_preferencia",
+                  "plazo_vencido",
+                  "sede_sin_regla",
+                  "caso_familiar_abierto"
+                ]
+              },
+              "detalle": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "codigo"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "via": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9][a-z0-9_.:-]*$"
+                },
+                "categoria": {
+                  "type": "string",
+                  "enum": [
+                    "custodia",
+                    "tutela",
+                    "dependencia",
+                    "hallazgos_independientes",
+                    "adopcion",
+                    "delincuencia",
+                    "otra"
+                  ]
+                },
+                "nombre": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "fechaLimiteOrden": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "format": "date",
+                      "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "diasRestantes": {
+                  "anyOf": [
+                    {
+                      "type": "integer",
+                      "minimum": -9007199254740991,
+                      "maximum": 9007199254740991
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "urgencia": {
+                  "type": "string",
+                  "enum": [
+                    "normal",
+                    "proxima",
+                    "urgente"
+                  ]
+                }
+              },
+              "required": [
+                "key",
+                "categoria",
+                "nombre",
+                "fechaLimiteOrden",
+                "diasRestantes",
+                "urgencia"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "corte": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9][a-z0-9_.:-]*$"
+                },
+                "nombreCanonico": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "encabezado": {
+                  "minItems": 1,
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              },
+              "required": [
+                "key",
+                "nombreCanonico",
+                "encabezado"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sede": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9][a-z0-9_.:-]*$"
+                },
+                "nombre": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "calle": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "ciudadEstadoZip": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "key",
+                "nombre",
+                "calle",
+                "ciudadEstadoZip"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "versionDatos": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "estado": {
+                  "type": "string",
+                  "pattern": "^[A-Z]{2}$"
+                },
+                "version": {
+                  "type": "integer",
+                  "exclusiveMinimum": 0,
+                  "maximum": 9007199254740991
+                }
+              },
+              "required": [
+                "estado",
+                "version"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "territorio": {
+          "type": "object",
+          "properties": {
+            "estado": {
+              "type": "string",
+              "pattern": "^[A-Z]{2}$"
+            },
+            "condado": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "fips": {
+                      "type": "string",
+                      "pattern": "^\\d{5}$"
+                    },
+                    "nombre": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "fips",
+                    "nombre"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "pueblo": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "estado",
+            "condado",
+            "pueblo"
+          ],
+          "additionalProperties": false
+        },
+        "viasEvaluadas": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "key": {
+                "type": "string",
+                "pattern": "^[a-z0-9][a-z0-9_.:-]*$"
+              },
+              "aplica": {
+                "type": "string",
+                "enum": [
+                  "si",
+                  "no",
+                  "falta_dato"
+                ]
+              },
+              "razones": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "key",
+              "aplica",
+              "razones"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "formularios": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "key": {
+                "type": "string",
+                "pattern": "^[a-z0-9][a-z0-9_.:-]*$"
+              },
+              "proposito": {
+                "type": "string",
+                "enum": [
+                  "peticion",
+                  "mocion_hallazgos_sijs",
+                  "orden_propuesta",
+                  "portada",
+                  "exencion_tasas",
+                  "notificacion",
+                  "declaracion",
+                  "otro"
+                ]
+              },
+              "numero": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "titulo": {
+                "type": "string",
+                "minLength": 1
+              },
+              "formDefinitionId": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "formato": {
+                "type": "string",
+                "enum": [
+                  "acroform",
+                  "xfa",
+                  "plano",
+                  "escaneado",
+                  "sin_formulario_oficial"
+                ]
+              }
+            },
+            "required": [
+              "key",
+              "proposito",
+              "numero",
+              "titulo",
+              "formDefinitionId",
+              "formato"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "requisitos": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "key": {
+                "type": "string",
+                "pattern": "^[a-z0-9][a-z0-9_.:-]*$"
+              },
+              "tipo": {
+                "type": "string",
+                "enum": [
+                  "tasa",
+                  "exencion_tasa",
+                  "notificacion_padres",
+                  "residencia_minima",
+                  "interprete",
+                  "copias",
+                  "presentacion_electronica"
+                ]
+              },
+              "texto": {
+                "type": "string",
+                "minLength": 1
+              },
+              "montoUsd": {
+                "anyOf": [
+                  {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "key",
+              "tipo",
+              "texto",
+              "montoUsd"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "evidenciaKeys": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9_.:-]*$"
+          }
+        }
+      },
+      "required": [
+        "status",
+        "motivos",
+        "via",
+        "corte",
+        "sede",
+        "versionDatos",
+        "territorio",
+        "viasEvaluadas",
+        "formularios",
+        "requisitos",
+        "evidenciaKeys"
+      ],
+      "additionalProperties": false
+    }
+  ]
+}
